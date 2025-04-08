@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let primitive1 = "Hello";
+        let primitive2 = primitive1;
+        primitive2 = "World";
+        console.log(primitive1); // "Hello"
+
+        let obj1 = { message: "Hello" };
+        let obj2 = obj1;
+        obj2.message = "World";
+        console.log(obj1.message); // "World"
+
+    </script>
+</body>
+</html>
+
+<!-- Kiểu nguyên thủy:
+
+primitive1 chứa giá trị "Hello" tại một vị trí bộ nhớ.
+
+primitive2 chứa một bản sao của giá trị "Hello", tại một vị trí bộ nhớ khác.
+
+Khi bạn thay đổi primitive2 thành "World", nó không thay đổi giá trị của primitive1 vì chúng ở những vùng nhớ khác nhau.
+
+Kiểu không nguyên thủy:
+
+obj1 và obj2 đều tham chiếu đến cùng một đối tượng trong bộ nhớ, vì vậy thay đổi qua obj2 cũng ảnh hưởng đến đối tượng mà obj1 tham chiếu. -->
