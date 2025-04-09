@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 10;
+        let y = 10;
+        let z = "10";
+
+        console.log(x == y);   // true  (cùng giá trị 10)
+        console.log(x === y);  // true  (cùng giá trị và cùng kiểu số)
+        console.log(x == z);   // true  (cùng giá trị "10", nhưng x là number, z là string)
+        console.log(x === z);  // false (x là number, z là string, kiểu khác nhau)
+
+
+
+        let a = { value: 10 };
+        let b = { value: 10 };
+        console.log(a == b); // false
+        console.log(a === b); // false
+
+        let c = a;
+        console.log(a === c); // true
+    </script>
+</body>
+</html>
+
+<!-- Giá trị nguyên thủy (primitive types) được so sánh theo giá trị. Nếu giá trị giống nhau (dù có thể có khác biệt kiểu dữ liệu), toán tử == có thể trả về true, còn === thì yêu cầu cả giá trị và kiểu dữ liệu đều giống nhau.
+
+Đối tượng (objects) được so sánh theo tham chiếu bộ nhớ, nghĩa là hai đối tượng có thể có giá trị giống nhau nhưng nếu chúng không trỏ đến cùng một đối tượng trong bộ nhớ, thì == và === sẽ trả về false. -->
